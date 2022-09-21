@@ -5,7 +5,7 @@ export default function Search(props){
 
     return (
         <form onSubmit={e => props.handleSearch(e, search)}>
-            <input id={'styles.textinput'} type='text' placholder='Search Audix' onChange={e => setSearch(e.target.value)} />
+            <input id='textinput' type='text' placeholder='Search Audix' onChange={e => setSearch(e.target.value)} />
         </form>
     )
 }

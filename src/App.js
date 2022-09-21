@@ -31,11 +31,11 @@ export default function App() {
   }
 
   return (
-    <div className='styles.main'>
-      <div className='styles.header'>
-        <h1 id='styles.audix'>Audix</h1>
+    <div className='main'>
+      <div className='header'>
+        <h1 id='audix'>Audix</h1>
       </div>
-      <div id='styles.search'>
+      <div id='search'>
         <Search handleSearch={handleSearch} />
       </div>
     </div>
