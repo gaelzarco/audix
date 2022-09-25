@@ -1,23 +1,21 @@
 import './App.css';
 import { useEffect, useState } from 'react'
 
-import Dropdown from './components/Dropdown';
-import Credentials from './components/Credentials';
+import LandingPage from './components/LandingPage';
 
 export default function App() {
 
-  const [ data, setData ] = useState('')
+  // const [ data, setData ] = useState('')
 
-  useEffect(() => {
-    fetch('/user')
-    .then(res => res.json())
-    .then(resData => setData(resData))
-  }, [])
+  // useEffect(() => {
+  //   fetch('/user')
+  //   .then(res => res.json())
+  //   .then(resData => setData(resData))
+  // }, [])
 
   return (
-    <div className="main">
-      <h1>Audix</h1>
-      <h1>{data.message}</h1>
+    <div className='app'>
+      <LandingPage />
     </div>
   )
 
