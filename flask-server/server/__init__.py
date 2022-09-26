@@ -7,7 +7,7 @@ def create_app():
     app = Flask(__name__)
 
     @app.route('/')
-    @cross_origin()
+    @cross_origin(origin='*')
     def index():
         return {'message': 'Python-Flask PostgreSQL Connection Established'}
     

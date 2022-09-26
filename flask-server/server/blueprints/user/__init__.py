@@ -1,16 +1,18 @@
 from urllib.parse import urlencode
-from flask import ( Blueprint, redirect, make_response )
-from flask_cors import CORS, cross_origin
+from flask import ( Blueprint, redirect, make_response, request )
+from flask_cors import cross_origin
 from dotenv import dotenv_values
 import random
 import string
+import base64
+import requests
 
 user = Blueprint('user', __name__)
+config = dotenv_values('.env')
 
-@user.route('/login')
+@user.route('/authorize')
 @cross_origin(origin='*')
-def index():
-    config = dotenv_values('.env')
+def authorize():
     client_id = config['CLIENT_ID']
     redirect_uri = config['REDIRECT_URI']
     
@@ -32,5 +34,34 @@ def index():
 
 @user.route('/callback')
 @cross_origin(origin='*')
-def index2():
-    return ['message', 'successful']
+def callback():
+    client_id = config['CLIENT_ID']
+    client_secret = config['CLIENT_SECRET']
+    redirect_uri = config['REDIRECT_URI']
+
+    if request.args.get('error') == 'access_denied':
+        return {'error': 'Access Denied'}
+    else :
+        token_url = 'https://accounts.spotify.com/api/token'
+        authorization = base64.base64encode(client_id + ':' + client_secret)
+        code = request.args.get('code')
+
+        headers = {
+            'Authorization': authorization, 
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        body = {
+            'code': code,
+            'redirect_uri': redirect_uri,
+            'grant-type': 'authorization_code'
+        }
+
+        post_response = requests.post(token_url, headers=headers, data=body)
+        print('post_response:' + post_response)
+
+    if post_response.status_code == 200 :
+        pr = post_response.json()
+        return pr['access_token', pr['refresh_token'], pr['expires_in']]
+    else:
+        return redirect('http://localhost:3000/')
