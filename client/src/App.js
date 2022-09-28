@@ -1,20 +1,29 @@
 import './App.css';
-// import { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom';
 
 import LandingPage from './components/LandingPage';
-import Error from './components/Error';
+import Profile from './components/Profile';
+
+import { getAccessToken } from './spotify';
 
 export default function App() {
 
+  const [ access_token, setAccessToken ] = useState('')
+
+  const [ searchParams ] =  useSearchParams()
+  let accessToken = searchParams.get('access_token')
+  let refreshToken = searchParams.get('refresh_token')
+
+  useEffect(() => {
+    setAccessToken(getAccessToken(accessToken, refreshToken))
+  }, [accessToken, refreshToken])
+
+  console.log(access_token)
+
   return (
     <div className='app'>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<LandingPage />} />
-          <Route path='/error/:error' element={<Error />} />
-        </Routes>
-      </BrowserRouter>
+        {access_token ? <Profile /> : <LandingPage />}
     </div>
   )
   }

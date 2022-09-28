@@ -24,6 +24,23 @@ const refreshAccessToken = async () => {
     }
 }
 
-export const getAccessToken = () => {
-    const { error, access_token, refresh_token } = getHashParams
+export const getAccessToken = (token, refreshToken) => {
+    // If token has expired
+    if (Date.now() - getTokenTimestamp() > expirationTime) {
+        console.warn('Access token has expired, refreshing...');
+        refreshAccessToken();
+    }
+
+    const localAccessToken = getLocalAccessToken();
+
+    // If there is no ACCESS token in local storage, set it and return `access_token` from params
+    if ((!localAccessToken || localAccessToken === 'undefined') && token) {
+        setLocalAccessToken(token);
+        setLocalRefreshToken(refreshToken);
+        return token;
+    }
+
+    return localAccessToken;
 }
+
+// export const token = getAccessToken()
