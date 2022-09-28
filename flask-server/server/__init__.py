@@ -5,7 +5,6 @@ from flask_cors import cross_origin
 from dotenv import dotenv_values
 import random
 import string
-import base64
 import requests
 
 # Init
@@ -64,8 +63,6 @@ def create_app():
             }
 
             post_response = requests.post(token_url, headers=headers, data=body)
-            print(post_response.json())
-            print(post_response.status_code)
 
         if post_response.status_code == 200 :
             pr = post_response.json()
