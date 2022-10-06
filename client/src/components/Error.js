@@ -8,8 +8,7 @@ export default function Error() {
         if (error === 'access_denied') {
             return (
                 <div>
-                    <h2 id='title'>Please allow Audix access to Spotify</h2>
-
+                    <h2 className='title'>Please allow Audix access to Spotify</h2>
                     <a href='/'>
                         <button id='bttn'>BACK</button>
                     </a>

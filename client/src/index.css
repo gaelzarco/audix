@@ -26,18 +26,34 @@
 html,
 body
 {
-  height: 100%;
-  width: 100%;
   font-family: 'GT America Extended';
-  background-color: rgb(14, 14, 14);
+  background-color: rgb(12, 12, 12);
   color: white;
 }
 
 .landing {
-  background-image: url('https://media4.giphy.com/media/ftYbYxLSsBgkcqN8OE/giphy.gif?cid=ecf05e47hreqdsl84s1rmuwboyy7nerrxtwibf7nly0j2yt9&rid=giphy.gif&ct=g');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgb(12, 12, 12);
+  height: 100vh;
+  width: 100vw;
+  display:table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.user {
+  display: flexbox;
+  background-color: rgb(12, 12, 12);
+  padding: 50px;
+  text-align: center;
+}
+
+.following,
+.top {
+  display: inline-flex;
+}
+
+.spinner-container {
+  background-color: rgb(12, 12, 12);
   height: 100vh;
   width: 100vw;
   display:table-cell;
@@ -46,7 +62,7 @@ body
 }
 
 .error {
-  background-color:rgb(17, 17, 17);
+  background-color: rgb(12, 12, 12);
   height: 100vh;
   width: 100vw;
   display:table-cell;
@@ -62,16 +78,57 @@ a {
   color: rgba(220, 220, 220, 0.8);
   text-decoration: none;
   transition: color .5s ease-in-out;
+  animation: fadein 1.5s;
 }
 
 a:hover {
   color: white;
 }
 
-#title {
+.title {
   font-family: 'GT America Extended Bold';
   animation: fadein 1.5s;
   padding: 15px;
+}
+
+.text {
+  font-family: 'GT America Extended';
+  animation: fadein 1.5s;
+  padding: 15px;
+}
+
+.toppics {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  border-radius: 100%;
+  height: 80px;
+  animation: fadein 1.5s;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+#avatar {
+  border-radius: 100%;
+  height: 200px;
+  animation: fadein 1.5s;
+}
+
+#spinner {
+  height: 250px;
 }
 
 #fetch {

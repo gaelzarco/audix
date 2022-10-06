@@ -78,5 +78,38 @@ def create_app():
             return response
         else:
             return redirect('http://localhost:3000/')
+
+    @app.route('/refresh_token')
+    @ cross_origin(origin='*')
+    def refresh_token():
+        client_id = config['CLIENT_ID']
+        authorization = config['AUTHORIZATION']
+        refresh_token = request.args.get('refresh_token')
+        print(refresh_token)
+
+        token_url = 'https://accounts.spotify.com/api/token'
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization':  'Basic ' + authorization
+        }
+        body = {
+            'grant_type': 'refresh_token',
+            'refresh_token': refresh_token,
+            'client_id': client_id
+        }
+
+        post_response = requests.post(token_url, headers=headers, data=body)
     
+        if post_response.status_code == 200 :
+            res = post_response.json()
+            access_token = res['access_token']
+            print(access_token)
+
+            return {'access_token': access_token}
+        else:
+            res = post_response.json()
+            error = res['error']
+
+            return f'error {error}'
+
     return app

@@ -1,17 +1,19 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import LoadingSpinner from '../loading/LoadingSpinner';
+import NavBar from "./NavBar";
 import Error from './Error';
-import LandingPage from "./LandingPage";
+import User from "./User";
+
+import LoadingSpinner from '../loading/LoadingSpinner';
 
 export default function Profile() {
-    
     return (
         <>
+        <NavBar />
         <Suspense fallback={<LoadingSpinner />} />
             <Routes>
-                <Route path='/' element={<LandingPage/>} />
+                <Route path='/' element={<User />}/>
                 <Route path='error/:error' element={<Error />} />
             </Routes>
         <Suspense />
