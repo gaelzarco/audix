@@ -32,8 +32,7 @@ body
 }
 
 .landing {
-  background-color: rgb(12, 12, 12);
-  height: 94vh;
+  height: 100vh;
   width: 100vw;
   display:table-cell;
   text-align: center;
@@ -42,7 +41,7 @@ body
 
 .app {
   background-color: rgb(12, 12, 12);
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
 }
 
@@ -172,6 +171,12 @@ body
   height: 160px;
   width: 160px;
   animation: fadein .35s;
+}
+
+.playlists {
+  padding-top: 30px;
+  justify-content: center;
+  text-align: center;
 }
 
 #nav {

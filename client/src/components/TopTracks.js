@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 import { getTopTracksLong } from "../spotify"
+import { millisToMinutesAndSeconds } from "../utility"
 
 import LoadingSpinner from "../loading/LoadingSpinner"
 
@@ -12,13 +13,6 @@ export default function TopTracks() {
         const tracks = await getTopTracksLong()
         setTopTracks(tracks.data.items)
     }
-
-    // Stack Overflow https://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript
-    function millisToMinutesAndSeconds(millis) {
-        var minutes = Math.floor(millis / 60000);
-        var seconds = ((millis % 60000) / 1000).toFixed(0);
-        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-      }
 
     useEffect(() => {
         fetchData()
