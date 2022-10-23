@@ -1,33 +1,21 @@
-import { useContext } from "react"
-import { useNavigate } from "react-router-dom"
-
-import { UserContext } from "../context/userContext"
+import { logout } from "../spotify"
 
 export default function NavBar() {
-
-    const [ user, setUser ] = useContext(UserContext)
-    const navigate = useNavigate()
-
-    const logout = () => {
-        setUser((user) => ({...user, accessToken: null, refreshToken: null}))
-        console.log(user)
-        navigate('/')
-    }
 
     return (
         <div>
             <nav id='nav'>
-                <a href='https://github.com/gaelzarco?tab=repositories' target={'_blank'} rel='noreferrer'>
-                    <h2 className='title' style={{fontSize: '1.5em'}}>AUDIX</h2>
+                <a className='navitem' href='https://github.com/gaelzarco?tab=repositories' target={'_blank'} rel='noreferrer'>
+                    <h2 className='title' style={{fontSize: '1.5em', animation: 'fadein 0s'}}>AUDIX</h2>
                 </a>
                 <ul>
-                    <li><a href='/'>profile</a></li>
-                    <li><a href='/artists'>top artists</a></li>
-                    <li><a href='/tracks'>top tracks</a></li>
-                    <li><a href='/recent'>recent</a></li>
-                    <li><a href='/playlists'>playlists</a></li>
+                    <li><a className='navitem' href='/'>profile</a></li>
+                    <li><a className='navitem' href='/artists'>top artists</a></li>
+                    <li><a className='navitem' href='/tracks'>top tracks</a></li>
+                    <li><a className='navitem' href='/recent'>recent</a></li>
+                    <li><a className='navitem' href='/playlists'>playlists</a></li>
                 </ul>
-                <button id='bttn' onClick={logout}>LOGOUT</button>
+                <button className='bttn' style={{animation: 'fadein 0s'}} onClick={logout}>LOGOUT</button>
             </nav>
         </div>
     )

@@ -4,7 +4,7 @@ export default function LandingPage() {
             <h1 className='title' style={{fontSize: '2.5rem'}}>AUDIX</h1>
             
             <a href='http://127.0.0.1:5000/authorize'>
-                <button id='bttn'>LOGIN</button>
+                <button className='bttn'>LOGIN</button>
             </a>
         </div>
     )

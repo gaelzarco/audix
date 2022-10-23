@@ -1,28 +1,23 @@
-import { useEffect, useContext } from 'react'
-import { useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+
+import { token } from './spotify';
 
 import LandingPage from './components/LandingPage';
 import Profile from './components/Profile';
 
-import { UserContext } from './context/userContext';
-
 export default function App() {
 
-  const [ token ] = useSearchParams()
-  const [ user, setUser ] = useContext(UserContext)
+  const [ accessToken, setAccessToken ] = useState(null)
 
   useEffect(() => {
-    const aToken = token.get('access_token')
-    const rToken = token.get('refresh_token')
+    setAccessToken(token)
+  }, [])
 
-    if (aToken && rToken) {
-      setUser((user) => ({ ...user, accessToken: aToken, refreshToken: rToken }))
-    }
-  }, [token, setUser])
+  console.log(accessToken)
 
   return (
     <div className='app'>
-        { user.accessToken !== null ? <Profile /> : <LandingPage />}
+        { accessToken !== 'undefined' && accessToken ? <Profile /> : <LandingPage />}
     </div>
   )
   }

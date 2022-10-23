@@ -33,32 +33,49 @@ body
 
 .landing {
   background-color: rgb(12, 12, 12);
-  height: 100vh;
+  height: 94vh;
   width: 100vw;
   display:table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
-.user {
-  display: flexbox;
+.app {
   background-color: rgb(12, 12, 12);
-  padding: 50px;
+  padding: 20px;
   text-align: center;
 }
 
-.following,
-.top {
+.following {
   display: inline-flex;
+}
+
+.user {
+  height: 60vh;
+  width: 100vw;
+  display:table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.top-artists {
+ padding: 20px;
+}
+
+.top-artists span {
+  display: inline-block;
+  padding: 20px;
+  width: 250px;
 }
 
 .spinner-container {
   background-color: rgb(12, 12, 12);
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   display:table-cell;
   text-align: center;
   vertical-align: middle;
+  animation: fadein .35s;
 }
 
 .error {
@@ -74,43 +91,94 @@ body
   text-align: center;
 }
 
-a {
+.a {
   color: rgba(220, 220, 220, 0.8);
   text-decoration: none;
   transition: color .5s ease-in-out;
-  animation: fadein 1.5s;
+  animation: fadein .35s;
 }
 
-a:hover {
+.a:hover {
+  color: white;
+}
+
+.navitem {
+  color: rgba(220, 220, 220, 0.8);
+  text-decoration: none;
+  transition: color .5s ease-in-out;
+}
+
+.navitem:hover {
   color: white;
 }
 
 .title {
   font-family: 'GT America Extended Bold';
-  animation: fadein 1.5s;
+  animation: fadein .35s;
   padding: 15px;
 }
 
 .text {
   font-family: 'GT America Extended';
-  animation: fadein 1.5s;
+  animation: fadein 1s;
   padding: 15px;
 }
 
-.toppics {
+.tracks {
+ display: inline-block;
+ padding-top: 30px;
+ justify-content: center;
+ text-align: center;
+}
+
+.trackscard {
+  width: 340px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tracks-img {
+  height: 280px;
+  z-index: -1;
+}
+
+.card-title {
+  padding: 10px;
+}
+
+.trackscard-content {
+  padding: 20px;
+  text-align: left;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(220 0% 0% / .3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+}
+
+.trackscard-content p {
+  padding-bottom: 7px;
+  padding-left: 10px;
+}
+
+.topapics {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
   border-radius: 100%;
-  height: 80px;
-  animation: fadein 1.5s;
+  height: 160px;
+  width: 160px;
+  animation: fadein .35s;
 }
 
 #nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 3%;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -124,33 +192,27 @@ nav ul li {
 #avatar {
   border-radius: 100%;
   height: 200px;
-  animation: fadein 1.5s;
+  animation: fadein .35s;
 }
 
 #spinner {
   height: 250px;
 }
 
-#fetch {
-  font-size: 1rem;
-  animation: fadein 1.5;
-  padding: 15px;
-  padding-bottom: 30px;
-}
-
-#bttn {
+.bttn {
   font-family: 'GT America Extended';
   background-color: rgba(99, 99, 99, 0.247);
   border: none;
   color: rgba(220, 220, 220, 0.8);
   width: 100px;
-  height: 30px;
+  height: auto;
+  padding: 5px;
   border-radius: 16px;
-  animation: fadein 1.5s;
+  animation: fadein .35s;
   transition: all .5s ease-in-out;
 }
 
-#bttn:hover {
+.bttn:hover {
   background-color: rgba(230, 230, 230, 0.247);
   color: white;
 }
