@@ -32,6 +32,10 @@ body
 }
 
 .landing {
+  background-image: url('https://media0.giphy.com/media/IV1oQSR67yUbfklywp/giphy.gif?cid=ecf05e47han427wnzbza9f7z7021cfbv1h4w8i79ajol7nuu&rid=giphy.gif&ct=g');
+  background-size: cover;
+  background-position: center;
+
   height: 100vh;
   width: 100vw;
   display:table-cell;
@@ -52,7 +56,7 @@ body
 .user {
   height: 60vh;
   width: 100vw;
-  display:table-cell;
+  display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
@@ -186,6 +190,7 @@ body
   padding-top: 3%;
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 2%;
 }
 
 nav ul li {
@@ -202,6 +207,43 @@ nav ul li {
 
 #spinner {
   height: 250px;
+}
+
+#static {
+  height: 100vh;
+  width: 100vw;
+  display:table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#static-bg{
+  border-radius: 10%;
+  background: url("./imgs/audxstatic.jpg");
+  background-size: cover;
+  width: 410px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: 600px;
+}
+
+#static-logo {
+  margin-top: -50px;
+}
+
+#static-content {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#static-bttn{
+  padding-top: 40px;
+}
+
+#navstatic {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .bttn {

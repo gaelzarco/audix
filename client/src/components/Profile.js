@@ -9,6 +9,7 @@ import TopArtists from "./TopArtists";
 import TopTracks from "./TopTracks";
 import Recent from "./Recent"
 import Playlists from "./Playlists"
+import Static from "./STATIC";
 
 import LoadingSpinner from '../loading/LoadingSpinner';
 
@@ -23,6 +24,7 @@ export default function Profile() {
                 <Route path='/tracks' element={<TopTracks />} />
                 <Route path='/recent' element={<Recent />} />
                 <Route path='/playlists' element={<Playlists />} />
+                <Route path='/STATIC' element={<Static />} />
                 <Route path='/error/:error' element={<Error />} />
             </Routes>
         <Suspense />

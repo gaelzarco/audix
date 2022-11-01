@@ -17,6 +17,7 @@ const refreshAccessToken = () => {
     try {
         axios.get(`http://127.0.0.1:5000/refresh_token?refresh_token=${getLocalRefreshToken()}`)
         .then(res => setLocalAccessToken(res.data.access_token))
+        .then(() => window.location.reload())
         return
     } catch (e) {
         console.log(e)
