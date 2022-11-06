@@ -11,15 +11,12 @@ export default function Recent() {
 
     const fetchData = async () => {
         const recent = await getRecentlyPlayed()
-        console.log(recent.data)
         setRecentlyPlayed(recent.data.items)
     }
 
     useEffect(() => {
         fetchData()
     }, [])
-
-    console.log(recentlyPlayed)
 
     return (
         <>
@@ -39,18 +36,6 @@ export default function Recent() {
                                         <a href={`/tracks/${recentSong.track.id}`}><button className='bttn'>SPOTIFY</button></a>
                                     </div>
                                 </div>
-
-                                // <div className='trackscard' key={index}>
-                                //     <img src={`${track.album.images[0].url}`} alt='Album Cover' className='tracks-img'></img>
-                                //     <div className='trackscard-content'>
-                                //         <h3 className='card-title' style={{fontSize: '1rem'}}>{track.name}</h3>
-                                //             <p style={{fontSize: '1rem'}}>{track.album.artists[0].name} ✦ {track.album.name}</p>
-                                //             <span>
-                                //                 <p style={{fontSize: '.75rem'}}>{millisToMinutesAndSeconds(track.duration_ms)}</p>
-                                //             </span>
-                                //         <a href={`/tracks/${track.id}`}><button className='bttn'>SPOTIFY</button></a>
-                                //     </div>
-                                // </div>
                             )
                         })
                     ) : (

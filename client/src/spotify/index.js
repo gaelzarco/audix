@@ -18,7 +18,6 @@ const refreshAccessToken = () => {
         axios.get(`http://127.0.0.1:5000/refresh_token?refresh_token=${getLocalRefreshToken()}`)
         .then(res => setLocalAccessToken(res.data.access_token))
         .then(() => window.location.reload())
-        return
     } catch (e) {
         console.log(e)
     }    
@@ -87,7 +86,8 @@ export const getTopArtistsLong = () =>
 
 export const getTopTracksShort = () =>
   axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=short_term', { headers });
-export const getTopTracksMedium = () =>
+
+  export const getTopTracksMedium = () =>
   axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=medium_term', {
     headers,
   });

@@ -13,8 +13,6 @@ export default function App() {
     setAccessToken(token)
   }, [])
 
-  console.log(accessToken)
-
   return (
     <div className='app'>
         { accessToken !== 'undefined' && accessToken ? <Profile /> : <LandingPage />}
