@@ -5,7 +5,7 @@ export default function Error() {
     console.log(error)
 
     const errorDisplay = () => {
-        if (error === 'access_denied') {
+        if (error ===  'access_denied') {
             return (
                 <div>
                     <h2 className='title'>Please allow Audix access to Spotify</h2>
@@ -20,6 +20,7 @@ export default function Error() {
     return (
         <div className='error'>
             {errorDisplay()}
+            <h1>hello</h1>
         </div>
     )
 }

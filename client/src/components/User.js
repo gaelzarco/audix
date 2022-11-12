@@ -25,7 +25,6 @@ export default function User() {
         <>
             {user !== null ? (
                 <div className='user'>
-
                     {user.images.length > 0 ? (
                         <img src={user.images[0].url} id='avatar' alt='avatar'/>
                     ) : (

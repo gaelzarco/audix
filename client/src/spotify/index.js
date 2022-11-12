@@ -24,11 +24,7 @@ const refreshAccessToken = () => {
 }
 
 const getAccessToken = () => {
-    const { accessToken, refreshToken, error } = getParams()
-
-    if (error) {
-        refreshAccessToken()
-    }
+    const { accessToken, refreshToken } = getParams()
 
     if (Date.now() - getTokenTimestamp() > EXPIRATION_TIME) {
         refreshAccessToken()

@@ -7,12 +7,7 @@ export const getParams = () => {
         'accessToken': urlParams.get('access_token'),
         'refreshToken': urlParams.get('refresh_token'),
     }
-
-    if (urlParams.get('error')) {
-        params['error'] = urlParams.get('error')
-        return params
-    }
-
+    
     return params
 }
 

@@ -6,6 +6,8 @@ import LoadingSpinner from "../loading/LoadingSpinner"
 
 export default function TopArtists() {
 
+    const [ search, setSearch ] = useState('long')
+
     const [ topArtists, setTopArtists ] = useState(null)
 
     const fetchData = async () => {
@@ -18,10 +20,23 @@ export default function TopArtists() {
         fetchData()
     }, [])
 
+    const setTimeframe = (id) => {
+        setSearch(id)
+    }
+
     return (
         <>
+            <div className='time'>
+                <div className='time-options'>
+                    <span className='option' id='short' onClick={ (e) => setTimeframe(e.target.id) }>4 Weeks</span>
+                    <span className='option' id='med' onClick={ (e) => setTimeframe(e.target.id) }>6 Months</span>
+                    <span className='option' id='long' onClick={ (e) => setTimeframe(e.target.id) }>All Time</span>
+                </div>
+            </div>
+
             {topArtists !== null ? (
                 <div className='top-artists'>
+
                     {topArtists.length > 0 ? (
                         topArtists.map((artist, index) => {
                             return ( 

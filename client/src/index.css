@@ -26,16 +26,16 @@
 html,
 body
 {
+  scroll-behavior: smooth;
   font-family: 'GT America Extended';
   background-color: rgb(12, 12, 12);
   color: white;
 }
 
 .landing {
-  background-image: url('https://media0.giphy.com/media/IV1oQSR67yUbfklywp/giphy.gif?cid=ecf05e47han427wnzbza9f7z7021cfbv1h4w8i79ajol7nuu&rid=giphy.gif&ct=g');
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fawarenessact.com%2Fwp-content%2Fuploads%2F2017%2F08%2Feclipse-1.gif&f=1&nofb=1&ipt=5e85027ba260c0a353fd8e7d85e5d3dad7515ba3d432f2230b6ab9afb79f5a7c&ipo=images');
   background-size: cover;
   background-position: center;
-
   height: 100vh;
   width: 100vw;
   display:table-cell;
@@ -55,12 +55,14 @@ body
 .user {
   height: 60vh;
   width: 100vw;
+  padding-top: 25px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
 .top-artists {
+ padding-top: 25px;
  padding-left: 20px;
  padding-right: 20px;
  padding-bottom: 20px;
@@ -108,7 +110,6 @@ body
 
 .navitem {
   color: rgba(220, 220, 220, 0.8);
-  border-bottom: 10px;
   text-decoration: none;
   transition: all .5s ease-in-out;
 }
@@ -118,11 +119,18 @@ body
   border-bottom: 15px;
 }
 
+a:is(:link, :active, :visited).active {
+  color: white;
+  text-decoration: none;
+}
+
+.time {
+  margin-top: 25px;
+}
+
 .time-options {
+  margin: auto;
   background-color: rgba(99, 99, 99, 0.247);
-  display: inline-block;
-  border: none;
-  height: auto;
   text-align: center;
   padding: 5px;
   width: 300px;
@@ -133,11 +141,9 @@ body
 }
 
 .option {
-  position: sticky;
   color: rgba(220, 220, 220, 0.8);
   padding-left: 10px;
   padding-right: 10px;
-  height: auto;
   transition: all .5s ease-in-out;
 }
 
@@ -162,15 +168,19 @@ body
 }
 
 .tracks {
+ animation: fadein .35s;
  display: inline-block;
- /* padding-top: 30px; */
- justify-content: center;
- text-align: center;
+ margin: auto;
+ margin-top: 25px;
+ padding-bottom: 10px;
+ width: 80%;
+ border-radius: 16px;
+ margin-bottom: 50px;
 }
 
 .trackscard {
-  width: 340px;
-  display: inline-block;
+  display: inline-flex;
+  width: 23vw;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -178,9 +188,31 @@ body
 }
 
 .tracks-img {
-  border-radius: 10%;
-  height: 280px;
-  z-index: -1;
+  margin: auto;
+  display: flex;
+  height: 45%;
+  width: 45%;
+  border-radius: 5%;
+}
+
+@media screen and (max-width:1200px){
+  .tracks {
+    width: 84%;
+    margin-top: 20px;
+  }
+
+  .trackscard {
+    width: 100%;
+  }
+
+  .tracks-img {
+    height: 40%;
+    width: 40%;
+  }
+
+  .time {
+    margin-top: 40px;
+  }
 }
 
 .card-title {
@@ -188,13 +220,9 @@ body
 }
 
 .trackscard-content {
-  padding: 20px;
+  padding: 10px;
   text-align: left;
-  background: linear-gradient(
-    hsl(0 0% 0% / 0),
-    hsl(220 0% 0% / .3) 20%,
-    hsl(0 0% 0% / 1)
-  );
+  width: 100%;
 }
 
 .trackscard-content p {
@@ -202,9 +230,13 @@ body
   padding-left: 10px;
 }
 
+.static-track {
+  padding-top: 3px;
+}
+
 .topapics {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 10px;
   border-radius: 100%;
   height: 160px;
@@ -226,13 +258,39 @@ body
   padding-top: 4%;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 2%;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 20px;
+}
+
+#small-nav-div {
+  position: sticky;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  overflow-y: visible;
+  top: 0;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  background-color: rgba(15, 15, 15, 0.98);
+  box-shadow: 0px 10px 50px black;
+
+}
+
+#small-nav {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-top: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
 }
 
 #avatar {
@@ -245,50 +303,53 @@ nav ul li {
   height: 250px;
 }
 
-#static {
+#static-page {
   padding-top: 25px;
 }
 
-#static-bg{
-  /* font-family: line-etch;
-  font-size: 30px; */
-  border-radius: 10%;
-  background: url("./imgs/audxstatic.jpg");
-  background-size: cover;
-  width: 350px;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  height: 600px;
-}
-
-#static-logo {
-  margin-top: -50px;
-}
-
-#static-tracks {
+#static {
   padding-top: 10px;
 }
 
+#static-bg{
+  background-image: url("./imgs/audixstatic.png");
+  background-size: cover;
+  height: 600px;
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#static-logo {
+  height: 120px;
+}
+
+#static-tracks {
+  font-size: 14px;
+}
+
 #static-audix {
+  position: absolute;
   font-family: "GT America Extended Bold";
-  display: inline-block;
   transform: rotate(-90deg);
   padding-left: 150px;
   padding-top: 30px;
-  padding-bottom: 280px;
+  padding-bottom: 180px;
 }
 
 #static-content {
-  display: inline-block;
-  margin-top: -120px;
-  text-align: center;
+  margin: auto;
+  padding-right: 10px;
+  margin-top: 30px;
+  text-align: right;
   width: 310px;
+  height: 400px;
 }
 
 #static-bttn{
   padding-top: 25px;
   padding-bottom: 30px;
+  position: relative;
 }
 
 #navstatic {
