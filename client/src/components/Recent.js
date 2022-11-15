@@ -6,7 +6,6 @@ import { millisToMinutesAndSeconds } from "../utility"
 import LoadingSpinner from "../loading/LoadingSpinner"
 
 export default function Recent() {
-
     const [ recentlyPlayed, setRecentlyPlayed ] = useState(null)
 
     const fetchData = async () => {
@@ -33,14 +32,14 @@ export default function Recent() {
                                             <span>
                                                 <p style={{fontSize: '.75rem'}}>{millisToMinutesAndSeconds(recentSong.track.duration_ms)}</p>
                                             </span>
-                                        <a href={`/tracks/${recentSong.track.id}`}><button className='bttn'>SPOTIFY</button></a>
+                                        <a href={recentSong.track.external_urls.spotify} target={'_blank'} rel='noreferrer'><button className='bttn'>SPOTIFY</button></a>
                                     </div>
                                 </div>
                             )
                         })
                     ) : (
                         <div className='spinner-container'>
-                            <h3 className='text'>you do not have any recently played tracks</h3>
+                            <h3 className='text' style={{color: 'rgb(255, 255, 255, 0.75)'}}>No recent tracks</h3>
                         </div>
                     )}
                 </div>

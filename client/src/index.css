@@ -1,21 +1,11 @@
 @font-face {
   font-family: "GT America Extended";
-  src: url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.eot");
-  src: url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.eot?#iefix") format("embedded-opentype"),
-       url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.woff2") format("woff2"),
-       url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.woff") format("woff"),
-       url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.ttf") format("truetype"),
-       url("//db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.svg#GT America Extended") format("svg");
+  src: url("./fonts/gtamericaextended.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "GT America Extended Bold";
-  src: url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.eot");
-  src: url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.eot?#iefix") format("embedded-opentype"),
-       url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.woff2") format("woff2"),
-       url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.woff") format("woff"),
-       url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.ttf") format("truetype"),
-       url("//db.onlinewebfonts.com/t/40794b621791bf498f2f06237862031f.svg#GT America Extended Bold") format("svg");
+  src: url("./fonts/gtamericaextendedbold.ttf") format("truetype");
 }
 
 * {
@@ -43,6 +33,13 @@ body
   vertical-align: middle;
 }
 
+#landing-desc {
+  margin: auto;
+  border-radius: 16px;
+  background-color: rgba(99, 99, 99, 0.247);
+  width: 50vw;
+}
+
 .app {
   background-color: rgb(12, 12, 12);
   text-align: center;
@@ -50,10 +47,15 @@ body
 
 .following {
   display: inline-flex;
+  padding-top: 20px;
+}
+
+.nested-following-span {
+  margin: auto;
 }
 
 .user {
-  height: 60vh;
+  height: 70vh;
   width: 100vw;
   padding-top: 25px;
   display: table-cell;
@@ -76,7 +78,7 @@ body
 
 .spinner-container {
   background-color: rgb(12, 12, 12);
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
   display:table-cell;
   text-align: center;
@@ -119,7 +121,7 @@ body
   border-bottom: 15px;
 }
 
-a:is(:link, :active, :visited).active {
+.active {
   color: white;
   text-decoration: none;
 }
@@ -180,6 +182,7 @@ a:is(:link, :active, :visited).active {
 
 .trackscard {
   display: inline-flex;
+  animation: fadein .35s;
   width: 23vw;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -189,49 +192,34 @@ a:is(:link, :active, :visited).active {
 
 .tracks-img {
   margin: auto;
+  animation: fadein .35s;
   display: flex;
   height: 45%;
   width: 45%;
   border-radius: 5%;
 }
 
-@media screen and (max-width:1200px){
-  .tracks {
-    width: 84%;
-    margin-top: 20px;
-  }
-
-  .trackscard {
-    width: 100%;
-  }
-
-  .tracks-img {
-    height: 40%;
-    width: 40%;
-  }
-
-  .time {
-    margin-top: 40px;
-  }
-}
-
 .card-title {
   padding: 10px;
+  animation: fadein .35s;
 }
 
 .trackscard-content {
   padding: 10px;
+  animation: fadein .35s;
   text-align: left;
   width: 100%;
 }
 
 .trackscard-content p {
   padding-bottom: 7px;
+  animation: fadein .35s;
   padding-left: 10px;
 }
 
 .static-track {
   padding-top: 3px;
+  animation: fadein .35s;
 }
 
 .topapics {
@@ -242,12 +230,6 @@ a:is(:link, :active, :visited).active {
   height: 160px;
   width: 160px;
   animation: fadein .35s;
-}
-
-.playlists {
-  padding-top: 30px;
-  justify-content: center;
-  text-align: center;
 }
 
 #nav {
@@ -296,6 +278,7 @@ nav ul li {
 #avatar {
   border-radius: 100%;
   height: 200px;
+  width: 200px;
   animation: fadein .35s;
 }
 
@@ -305,10 +288,12 @@ nav ul li {
 
 #static-page {
   padding-top: 25px;
+  animation: fadein .35s;
 }
 
 #static {
   padding-top: 10px;
+  animation: fadein .35s;
 }
 
 #static-bg{
@@ -364,7 +349,6 @@ nav ul li {
   border: none;
   color: rgba(220, 220, 220, 0.8);
   width: 100px;
-  height: auto;
   padding: 5px;
   border-radius: 16px;
   animation: fadein .35s;
@@ -379,4 +363,30 @@ nav ul li {
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@media screen and (max-width:1200px){
+  .tracks {
+    width: 84%;
+    margin-top: 20px;
+  }
+
+  .trackscard {
+    width: 100%;
+  }
+
+  .tracks-img {
+    height: 40%;
+    width: 40%;
+  }
+
+  .time {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nested-following-span {
+    font-size: 14px;
+  }
 }

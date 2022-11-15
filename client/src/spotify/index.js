@@ -66,7 +66,9 @@ export const getFollowing = () => axios.get('https://api.spotify.com/v1/me/follo
 export const getRecentlyPlayed = () =>
   axios.get('https://api.spotify.com/v1/me/player/recently-played', { headers });
 
-export const getPlaylists = () => axios.get('https://api.spotify.com/v1/me/playlists', { headers });
+// export const getPlaylists = () => axios.get('https://api.spotify.com/v1/me/playlists', { headers });
+
+export const getArtist = (id) => axios.get(`https://api.spotify.com/v1/artists/${id}`, {headers})
 
 export const getTopArtistsShort = () =>
   axios.get('https://api.spotify.com/v1/me/top/artists?limit=50&time_range=short_term', {

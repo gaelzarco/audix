@@ -2,11 +2,8 @@ import { useState, useEffect } from 'react'
 
 import { logout } from "../spotify"
 
-
 export default function NavBar() {
-
     const [ currentTab, setCurrentTab ] = useState('profile')
-
     const [ navToggle, setNavToggle ] = useState(false)
     const [ windowDimension, setWindowDimension ] = useState(null)
 
@@ -56,7 +53,6 @@ export default function NavBar() {
                         <h3 style={{animation: 'fadein 0s', paddingLeft: '10px', paddingRight: '10px'}}>✦</h3>
                         <button className='bttn' style={{animation: 'fadein 0s', width: '80px'}} onClick={logout}>LOGOUT</button>
                     </div>
-
                     {navToggle === true ? (
                         <ul>
                             <li style={{padding: '15px'}}><a className={currentTab === '/' ? 'active' : 'navitem'} href='/'>profile</a></li>

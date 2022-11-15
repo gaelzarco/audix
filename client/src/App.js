@@ -6,7 +6,6 @@ import LandingPage from './components/LandingPage';
 import Profile from './components/Profile';
 
 export default function App() {
-
   const [ accessToken, setAccessToken ] = useState(null)
 
   useEffect(() => {
@@ -15,7 +14,7 @@ export default function App() {
 
   return (
     <div className='app'>
-        { accessToken !== 'undefined' && accessToken ? <Profile /> : <LandingPage />}
+        { accessToken !== 'undefined' && accessToken ? <Profile /> : <LandingPage /> }
     </div>
   )
-  }
+}

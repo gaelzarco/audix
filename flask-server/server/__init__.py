@@ -44,7 +44,7 @@ def create_app():
         frontend_uri = config['FRONTEND_URI']
 
         if request.args.get('error') == 'access_denied':
-            return redirect(f'{frontend_uri}/error/access_denied')
+            return redirect(frontend_uri)
         else :
             token_url = 'https://accounts.spotify.com/api/token'
             code = request.args.get('code')
