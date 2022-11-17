@@ -23,7 +23,7 @@ body
 }
 
 .landing {
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fawarenessact.com%2Fwp-content%2Fuploads%2F2017%2F08%2Feclipse-1.gif&f=1&nofb=1&ipt=5e85027ba260c0a353fd8e7d85e5d3dad7515ba3d432f2230b6ab9afb79f5a7c&ipo=images');
+  background-image: url('https://i.gifer.com/81Rn.gif');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -37,7 +37,7 @@ body
   margin: auto;
   border-radius: 16px;
   background-color: rgba(99, 99, 99, 0.247);
-  width: 50vw;
+  width: 40vw;
 }
 
 .app {
@@ -137,7 +137,7 @@ body
   padding: 5px;
   width: 300px;
   border-radius: 16px;
-  animation: fadein .35s;
+  /* animation: fadein .35s; */
   transition: all .5s ease-in-out;
   cursor: pointer;
 }
@@ -219,7 +219,6 @@ body
 
 .static-track {
   padding-top: 3px;
-  animation: fadein .35s;
 }
 
 .topapics {
@@ -288,7 +287,6 @@ nav ul li {
 
 #static-page {
   padding-top: 25px;
-  animation: fadein .35s;
 }
 
 #static {
@@ -297,7 +295,7 @@ nav ul li {
 }
 
 #static-bg{
-  background-image: url("./imgs/audixstatic.png");
+  /* background-image: url("./imgs/audixstatic.png"); */
   background-size: cover;
   height: 600px;
   width: 350px;
@@ -324,6 +322,7 @@ nav ul li {
 
 #static-content {
   margin: auto;
+  display: inline-block;
   padding-right: 10px;
   margin-top: 30px;
   text-align: right;
@@ -332,7 +331,7 @@ nav ul li {
 }
 
 #static-bttn{
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 30px;
   position: relative;
 }
@@ -360,12 +359,26 @@ nav ul li {
   color: white;
 }
 
+#footer {
+  position: absolute;
+  bottom: 25px;
+  margin: auto;
+  width: 150px;
+  padding: 5px;
+  right: 40%;
+  left: 40.5%;
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
 @media screen and (max-width:1200px){
+  #landing-desc {
+    width: 60vw;
+  }
+
   .tracks {
     width: 84%;
     margin-top: 20px;
@@ -382,6 +395,11 @@ nav ul li {
 
   .time {
     margin-top: 40px;
+  }
+
+  #footer {
+    right: 15%;
+    left: 15.6%;
   }
 }
 

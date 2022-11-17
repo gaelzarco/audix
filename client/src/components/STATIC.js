@@ -1,4 +1,5 @@
 import html2canvas from 'html2canvas'
+import * as htmlToImage from 'html-to-image'
 
 import { useState, useEffect } from "react";
 
@@ -10,6 +11,7 @@ import statix from '../imgs/statix.png'
 
 export default function Static() {
     const [ search, setSearch ] = useState('long')
+    const [ bg, setBg ] = useState(0)
     const [ user, setUser ] = useState(null)
     const [ tracksAll, setTracksAll ] = useState(null)
     const [ tracksMed, setTracksMed ] = useState(null)
@@ -26,14 +28,37 @@ export default function Static() {
         setTracksShort(songsShort.data.items.slice(0, 10))
     }
 
+    useEffect(() => {
+        fetchData()
+    }, [])
+
     const download = () => {
         const input = document.getElementById('static-bg')
         html2canvas(input).then(canvas => {
             let link = document.createElement("a")
             link.download = "AUDIX_STATIC.png"
-            link.href = canvas.toDataURL('image/jpeg', 0.9)
+            link.href = canvas.toDataURL('image/jpeg', 1.0)
             link.click()
         })
+    }
+
+    const backgrounds = [
+        'https://audixbucket.s3.us-west-1.amazonaws.com/static1-modified.png',
+        'https://audixbucket.s3.us-west-1.amazonaws.com/static2-modified.png',
+        'https://audixbucket.s3.us-west-1.amazonaws.com/static3-modified.png',
+        'https://audixbucket.s3.us-west-1.amazonaws.com/static4-modified.png'
+    ]
+
+    const backdrop = () => {
+        bg === 3 ? setBg(0) : setBg(bg + 1)
+        console.log(bg)
+        console.log(backgrounds[bg])
+        // let background = document.getElementById('static-bg')
+        // for (let i = 0; i < backgrounds.length; i++) {
+        //     if (bg === i) {
+        //         background.style.backgroundImage = `url(${backgrounds[i]})`
+        //     }
+        // }
     }
 
     const displayTracks = () => {
@@ -60,10 +85,6 @@ export default function Static() {
         }
     }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
-
     return (
         <>
             <div className='time'>
@@ -76,7 +97,7 @@ export default function Static() {
             {user !== null ? (
                 <div id='static-page'>
                     <div id="static">
-                        <div id="static-bg">
+                        <div id="static-bg" style={{backgroundImage: `url(${backgrounds[bg]})`}}>
                             <img id='static-logo'src={statix} alt='static logo'></img>
                             <div id='static-content'>
                                 <h2>{user.display_name} ✦ top tracks</h2>
@@ -89,7 +110,8 @@ export default function Static() {
                         </div>
                     </div>
                     <div id='static-bttn'>
-                        <button className="bttn" style={{width: '140px'}} onClick={() => download()}>DOWNLOAD</button>
+                        <span style={{padding: '5px'}}><button className="bttn" style={{width: '140px'}} onClick={() => download()}>DOWNLOAD</button></span>
+                        <span style={{padding: '5px'}}><button className='bttn' style={{width: '140px'}} onClick={() => backdrop()}>BACKDROP</button></span>
                     </div>
                 </div>
             ) : (
