@@ -14,7 +14,8 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
 ## Features
 
 - View Spotify top artists, tracks, recent songs, and profile
-- Create image and download image of top tracks
+- Create and download image of top Spotify tracks
+- Dynamic STATIC background for more personalization
 - Mobile optimized
 
 
@@ -28,7 +29,7 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
 
 
  #### Callback
- 'GET /callback`
+ `GET /callback`
  Spotify redirects to this endpoint upon login and retrieves user tokens for frontend
 
  #### Token Refresh
@@ -43,3 +44,6 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
  - [Spotify-Profile](https://github.com/bchiang7/spotify-profile)
  - [Receiptify](https://www.receiptify.us/)
 
+### DISCLAIMER
+
+ALL IMAGES AND ASSETS ARE NOT MINE AND ARE THE WORK OF SOMEONE ELSE.
