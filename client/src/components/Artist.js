@@ -11,14 +11,14 @@ export default function Artist() {
     
     const [ artist, setArtist ] = useState(null)
 
-    const fetchData = async () => {
-        const art = await getArtist(id)
-        setArtist(art.data)
-    }
-
     useEffect(() => {
+        async function fetchData() {
+            const art = await getArtist(id)
+            setArtist(art.data)
+        }
+
         fetchData()
-    }, [])
+    }, [id])
     
     const titleStyle = {
         fontSize: '1rem',
