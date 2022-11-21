@@ -1,5 +1,4 @@
 import html2canvas from 'html2canvas'
-import * as htmlToImage from 'html-to-image'
 
 import { useState, useEffect } from "react";
 
@@ -7,7 +6,12 @@ import { getUser, getTopTracksShort, getTopTracksMedium, getTopTracksLong } from
 
 import LoadingSpinner from "../loading/LoadingSpinner"
 
-import statix from '../imgs/statix.png'
+import staticlogo from '../imgs/staticlogo.png'
+import static1 from '../imgs/static1.png'
+import static2 from '../imgs/static2.png'
+import static3 from '../imgs/static3.png'
+import static4 from '../imgs/static4.png'
+import static5 from '../imgs/static5.png'
 
 export default function Static() {
     const [ search, setSearch ] = useState('long')
@@ -33,8 +37,8 @@ export default function Static() {
     }, [])
 
     const download = () => {
-        const input = document.getElementById('static-bg')
-        html2canvas(input).then(canvas => {
+        html2canvas(document.getElementById('static-bg')).then(canvas => {
+            console.log(canvas.toDataURL('image/jpeg', 1.0))
             let link = document.createElement("a")
             link.download = "AUDIX_STATIC.png"
             link.href = canvas.toDataURL('image/jpeg', 1.0)
@@ -43,22 +47,15 @@ export default function Static() {
     }
 
     const backgrounds = [
-        'https://audixbucket.s3.us-west-1.amazonaws.com/static1-modified.png',
-        'https://audixbucket.s3.us-west-1.amazonaws.com/static2-modified.png',
-        'https://audixbucket.s3.us-west-1.amazonaws.com/static3-modified.png',
-        'https://audixbucket.s3.us-west-1.amazonaws.com/static4-modified.png'
+        static1,
+        static2,
+        static3,
+        static4,
+        static5
     ]
 
     const backdrop = () => {
-        bg === 3 ? setBg(0) : setBg(bg + 1)
-        console.log(bg)
-        console.log(backgrounds[bg])
-        // let background = document.getElementById('static-bg')
-        // for (let i = 0; i < backgrounds.length; i++) {
-        //     if (bg === i) {
-        //         background.style.backgroundImage = `url(${backgrounds[i]})`
-        //     }
-        // }
+        bg === 4 ? setBg(0) : setBg(bg + 1)
     }
 
     const displayTracks = () => {
@@ -98,7 +95,7 @@ export default function Static() {
                 <div id='static-page'>
                     <div id="static">
                         <div id="static-bg" style={{backgroundImage: `url(${backgrounds[bg]})`}}>
-                            <img id='static-logo'src={statix} alt='static logo'></img>
+                            <img id='static-logo'src={staticlogo} alt='static logo'></img>
                             <div id='static-content'>
                                 <h2>{user.display_name} ✦ top tracks</h2>
                                 <br></br>

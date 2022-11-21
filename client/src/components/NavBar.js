@@ -33,7 +33,7 @@ export default function NavBar() {
             {windowDimension > 1200 ? (
                 <div id='nav-div'>
                 <nav id='nav'>
-                    <a className='navitem' href='https://github.com/gaelzarco/audix' target={'_blank'} rel='noreferrer'>
+                    <a className='navitem' href='https://github.com/gaelzarco/audix' target={'_blank'} rel='noreferrer' style={{color: 'rgb(255, 255, 255)'}}>
                         <h2 className='title' style={{fontSize: '1.5em', animation: 'fadein 0s', paddingLeft: '2px'}}>AUDIX</h2>
                     </a>           
                     <ul>
@@ -50,7 +50,9 @@ export default function NavBar() {
                 <div id='small-nav-div'>
                     <div id='small-nav'>
                         <button className='bttn' onClick={toggleBttn} style={{animation: 'fadein 0s', width: '80px'}}>NAV</button>
-                        <h3 style={{animation: 'fadein 0s', paddingLeft: '10px', paddingRight: '10px'}}>✦</h3>
+                        <a className='navitem' href='https://github.com/gaelzarco/audix' target={'_blank'} rel='noreferrer'>
+                            <h3 style={{animation: 'fadein 0s', paddingLeft: '10px', paddingRight: '10px'}}>✦</h3>
+                        </a>
                         <button className='bttn' style={{animation: 'fadein 0s', width: '80px'}} onClick={logout}>LOGOUT</button>
                     </div>
                     {navToggle === true ? (

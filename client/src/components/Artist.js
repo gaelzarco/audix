@@ -19,9 +19,7 @@ export default function Artist() {
     useEffect(() => {
         fetchData()
     }, [])
-
-    console.log(artist)
-
+    
     const titleStyle = {
         fontSize: '1rem',
         color: 'rgb(255, 255, 255, 0.75)'
