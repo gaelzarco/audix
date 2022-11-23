@@ -6,10 +6,9 @@
 Audix is a website that allows users to create a STATIC that can be shared on social media.
 It aims to replicate what Receiptify does but with a few more features.
 
-Built on a React front-end with vanilla CSS for styling and a Python/Flask back-end that handles Spotify Web API authentication.
+Built on a React front-end with vanilla CSS for styling and a Nodejs/Express back-end that handles Spotify Web API authentication.
 
-
-
+The included Flask-server is fully functional and is the original backend used for this project. It was not used in deployment due to compatibility issues with Windows/Railway.
 
 ## Features
 
@@ -17,7 +16,6 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
 - Create and download image of top Spotify tracks
 - Dynamic STATIC background for more personalization
 - Mobile optimized
-
 
 ## API Reference
 
@@ -27,7 +25,6 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
  `GET /authorize`
  Calls `/authorize` Spotify endpoint to verify app credentials and prompt user login
 
-
  #### Callback
  `GET /callback`
  Spotify redirects to this endpoint upon login and retrieves user tokens for frontend
@@ -35,8 +32,6 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
  #### Token Refresh
  `GET /refresh_token`
  If token expires, frontend navigates to this endpoint passing in a `refresh_token` and retrieves new access token
-
-
 
 ## Acknowledgements
 
@@ -46,4 +41,4 @@ Built on a React front-end with vanilla CSS for styling and a Python/Flask back-
 
 ### DISCLAIMER
 
-ALL IMAGES AND ASSETS ARE NOT MINE AND ARE THE WORK OF SOMEONE ELSE. THIS IS MERELY A PORTFOLIO PROJECT.
+ALL IMAGES AND ASSETS ARE NOT MINE AND ARE THE WORK OF SOMEONE ELSE. THIS IS MERELY A PORTFOLIO/SIDE PROJECT.
