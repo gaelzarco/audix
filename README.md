@@ -35,9 +35,8 @@ The included Flask-server is fully functional and is the original backend used f
 
 ## Acknowledgements
 
- - [Readme.so](https://readme.so/)
- - [Spotify-Profile](https://github.com/bchiang7/spotify-profile)
- - [Receiptify](https://www.receiptify.us/)
+ - [Spotify-Profile](https://github.com/bchiang7/spotify-profile) (how tokens are handled on client-side and overall inspiration)
+ - [Receiptify](https://www.receiptify.us/) (inspiration behind STATIC)
 
 ### DISCLAIMER
 
