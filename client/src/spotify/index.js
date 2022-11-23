@@ -15,7 +15,7 @@ const getLocalRefreshToken = () => window.localStorage.getItem('spotify_refresh_
 
 const refreshAccessToken = () => {
     try {
-        axios.get(`http://127.0.0.1:5000/refresh_token?refresh_token=${getLocalRefreshToken()}`)
+        axios.get(`http://localhost:5000/refresh_token?refresh_token=${getLocalRefreshToken()}`)
         .then(res => setLocalAccessToken(res.data.access_token))
         .then(() => window.location.reload())
     } catch (e) {
