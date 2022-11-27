@@ -4,7 +4,7 @@
 
 ## Description
 Audix is a website that allows users to create a STATIC that can be shared on social media.
-It aims to replicate what Receiptify does but with a few more features. SPOTIFY DID NOT GRANT QUOTA EXTENSION THEREFORE DEMO ACCOUNT MUST BE USED TO ACCESS WEBSITE.
+It aims to replicate what Receiptify does but with a few more features.
 
 Built on a React front-end with vanilla CSS for styling and a Nodejs/Express back-end that handles Spotify Web API authentication.
 
