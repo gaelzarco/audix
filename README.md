@@ -1,6 +1,29 @@
+<div align="center">
+
 <div align='center'>
 
-#### Audix is a website that allows users to create a STATIC that can be shared on social media. It aims to replicate what Receiptify does but with a few more features. 🔮
+<img src='https://img.shields.io/badge/React-React/?logo=react&color=black' alt='React'>
+
+<img src="https://img.shields.io/badge/JavaScript-JavaScript/?logo=javascript&color=black" alt="JavaScript">
+
+<img src='https://img.shields.io/badge/Python-Python/?logo=python&color=black' alt= 'Python'>
+
+<img src='https://img.shields.io/badge/NodeJS-Nodejs/?logo=nodedotjs&color=black' alt='NodeJS'>
+
+<img src='https://img.shields.io/badge/Express-Express/?logo=expressdotjs&color=black' alt='Express'>
+
+</div>
+
+# [Audix](https://audix.vercel.app)
+#### Create and customize a STATIC to share your music with the world. 
+
+#### Audix aims to replicate what Receiptify does but with a few more features 🔮
+
+<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x1_so.png" width="100%"/>
+
+<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x2_so.png" width="100%"/>
+
+<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x3_so.png" width="100%"/>
 
 #### Features
 
@@ -12,33 +35,11 @@ Dynamic STATIC background for more personalization 🖌️
  
 Mobile optimized 📱
 
-<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x1_so.png" width="100%"/>
-
-<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x2_so.png" width="100%"/>
-
-<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x3_so.png" width="100%"/>
-
-#### API Reference
-
-### Spotify Web API authentication
-
- #### Authorize
- `GET /authorize`
- Calls `/authorize` Spotify endpoint to verify app credentials and prompt user login
-
- #### Callback
- `GET /callback`
- Spotify redirects to this endpoint upon login and retrieves user tokens for frontend
-
- #### Token Refresh
- `GET /refresh_token`
- If token expires, frontend navigates to this endpoint passing in a `refresh_token` and retrieves new access token
-
-### Acknowledgements
+## Acknowledgements
  
 <div align='center'>
  
-[Spotify-Profile](https://github.com/bchiang7/spotify-profile) (how tokens are handled on client-side and overall inspiration) 
+[Spotify-Profile](https://github.com/bchiang7/spotify-profile) (Overall inspiration) 
  
 </div>
  
@@ -53,5 +54,7 @@ Mobile optimized 📱
 ALL IMAGES AND ASSETS ARE NOT MINE AND ARE THE WORK OF SOMEONE ELSE.
 
 SPOTIFY DID NOT GRANT A QUOTA EXTENSION THEREFORE A DEMO ACCOUNT IS PROVIDED.
+
+FLASK INCLUDED WAS NOT USED IN PRODUCTION DUE TO DEPLOYMENT ISSUES WITH RAILWAY.
 
 </div>
