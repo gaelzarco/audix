@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix.png" width="100%" />
+
 # [Audix](https://audix.vercel.app)
  
 #### Create and customize a STATIC to share your music with the world. 
