@@ -1,6 +1,6 @@
 <div align='center'>
-![Logo](https://audixbucket.s3.us-west-1.amazonaws.com/Audix+%2B+Static+(500+%C3%97+250+px)+(1000+%C3%97+500+px).gif)
-
+ 
+<img src='https://audixbucket.s3.us-west-1.amazonaws.com/Audix+%2B+Static+(500+%C3%97+250+px)+(1000+%C3%97+500+px).gif' width="100%" />
 
 #### Description
 Audix is a website that allows users to create a STATIC that can be shared on social media.
@@ -12,10 +12,10 @@ The included Flask-server is fully functional and is the original backend used f
 
 #### Features
 
-- View Spotify top artists, tracks, recent songs, and profile
-- Create and download image of top Spotify tracks
-- Dynamic STATIC background for more personalization
-- Mobile optimized
+View Spotify top artists, tracks, recent songs, and profile 👤
+Create and download image of top Spotify tracks 🎧
+Dynamic STATIC background for more personalization 🖌️
+Mobile optimized 📱
 
 <img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x1_so.png" width="100%"/>
 
