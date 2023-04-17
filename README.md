@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix.png" width="100%" />
+<img src="https://readmeimg.s3.us-west-2.amazonaws.com/audixbanner.png" width="100%" />
 
 <div align='center'>
 
