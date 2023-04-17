@@ -18,11 +18,11 @@
 
 <img src='https://img.shields.io/badge/NodeJS-Nodejs/?logo=nodedotjs&color=black' alt='NodeJS'>
 
-<img src='https://img.shields.io/badge/Express-Express/?logo=expressdotjs&color=black' alt='Express'>
+<img src='https://img.shields.io/badge/Express-Express/?logo=express&color=black' alt='Express'>
 
 </div>
  
-#### Demo Account
+## Demo Account
  
 #### Username: audix.sample1@gmail.com
  
@@ -34,7 +34,7 @@
 
 <img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x3_so.png" width="100%"/>
 
-#### Features
+## Features
 
 View Spotify top artists, tracks, recent songs, and profile 👤
  
@@ -44,7 +44,7 @@ Dynamic STATIC background for more personalization 🖌️
  
 Mobile optimized 📱
 
-#### Acknowledgements
+## Acknowledgements
  
 <div align='center'>
  
@@ -58,7 +58,7 @@ Mobile optimized 📱
  
 </div>
 
-#### DISCLAIMER
+## DISCLAIMER
 
 ALL IMAGES AND ASSETS ARE NOT MINE AND ARE THE WORK OF SOMEONE ELSE.
 
