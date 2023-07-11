@@ -36,15 +36,23 @@
 
 <img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x3_so.png" width="100%"/>
 
-## Features
-
-View Spotify top artists, tracks, recent songs, and profile 👤
- 
-Create and download image of top Spotify tracks 🎧
- 
-Dynamic STATIC background for more personalization 🖌️
- 
-Mobile optimized 📱
+<div align='left'>
+  
+  ## Features
+  
+  - JWT User authentication
+  - Spotify Web-API integration
+  - Express/Flask REST API
+  - Search querying
+  - HTML to image functionality
+  - Loading UI
+  - SPA
+  - Local storage implementation
+  - Customizable/downloadable image of user's top tracks
+   - Specifiable time-range
+  - Spotify profile integration
+    
+</div>
 
 ## Acknowledgements
  
