@@ -48,13 +48,6 @@
     
 </div>
 
-## Acknowledgements
- 
-<div align='center'>
- 
-✦ [Spotify-Profile](https://github.com/bchiang7/spotify-profile) (Overall inspiration) ✦
- 
-</div>
 
 ## Screenshots
 
@@ -68,6 +61,14 @@
 <div align='center'>
  
 ✦ [Receiptify](https://www.receiptify.us/) (inspiration behind STATIC) ✦
+ 
+</div>
+
+## Acknowledgements
+ 
+<div align='center'>
+ 
+✦ [Spotify-Profile](https://github.com/bchiang7/spotify-profile) (Overall inspiration) ✦
  
 </div>
 
