@@ -57,18 +57,18 @@
 
 <img src="https://readmeimg.s3.us-west-2.amazonaws.com/audix-x3_so.png" width="100%"/>
 
- 
-<div align='center'>
- 
-✦ [Receiptify](https://www.receiptify.us/) (inspiration behind STATIC) ✦
- 
-</div>
 
 ## Acknowledgements
  
 <div align='center'>
  
 ✦ [Spotify-Profile](https://github.com/bchiang7/spotify-profile) (Overall inspiration) ✦
+ 
+</div>
+
+<div align='center'>
+ 
+✦ [Receiptify](https://www.receiptify.us/) (inspiration behind STATIC) ✦
  
 </div>
 
