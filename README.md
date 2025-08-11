@@ -1,6 +1,5 @@
 <div align="center">
 
-
 <img src='https://img.shields.io/badge/React-React/?logo=react&color=black' alt='React'>
 
 <img src="https://img.shields.io/badge/JavaScript-JavaScript/?logo=javascript&color=black" alt="JavaScript">
@@ -19,7 +18,7 @@
 
 <div align='left'>
   
-  ## Features
+  ### Features
   
   - JWT User authentication
   - Spotify Web-API integration
